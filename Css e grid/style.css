@@ -7,7 +7,6 @@ body, ul, li, p {
     font-size: 1,2em;
     font-family: arial;
 }
-
 body {
     margin-bottom: 100px;
 }
@@ -15,6 +14,11 @@ body {
 h1 {
     text-align: center;
     margin: 100px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
@@ -29,11 +33,6 @@ header {
     padding: 20px;
     flex-wrap: wrap;
     align-items: center;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 .menu {
@@ -60,12 +59,48 @@ img {
     flex: 1 1 200px;
     margin: 10px;
 }
-/* css grid */
 
-.grid {
+/* CSS GRID 1 */
+
+.grid1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 800px;
-    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
 
+.grid1 > div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+.grid1 > div.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    border-top: 10px solid tomato;
+    display: block;
+    
+}
+@media (max-width: 600px){
+    .grid1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid1 > div:nth-child(n + 4){
+        display: block;
+    }
+    .grid1 > div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* CSS  GRID2 */
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    
 }
