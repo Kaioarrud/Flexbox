@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+html , body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.div1{
+    width: 150px;
+    height: 50px;
+    background: red;
+    transform: translate(150px, 50%);
+/*    
+    position: relative;
+    top: 50px;
+    left: 50px;
+*/
+
+}
+.div2{
+    width: 150px;
+    height: 50px;
+    background: blue;
+    position: relative;
+    left: 50%;
+}
+.div3 {
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div3-interna {
+    background: yellow;
+    transform: translate(80%);
+}
+.div4 {
+    width: 50%;
+    overflow: hidden;
+    border:solid 2px black;
+}
+.div4-interna {
+    background: yellow;
+    transform: rotate(-0deg);
+}
+.div5{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div5-interna {
+    background: yellow;
+    transform: rotate(30deg);
+    transform-origin: left top;
+}
+.div6{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div6-interna {
+   background: yellow;
+   transform: rotate(30deg) translate(30px);
+}
+.div7 {
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div7-interna{
+    background: yellow;
+    transform: translate(30px) rotate(30deg);
+}
+.div8{
+    width: 100px;
+    height: 100px;
+    background: orange;
+    transform: skew(-30deg, 40deg);
+}
+.div9{
+    width: 100px;
+    height: 100px;
+    background:blue;
+    transition: transform .5s;
+}
+.div9:hover{
+    transform: scale(2);
+}
